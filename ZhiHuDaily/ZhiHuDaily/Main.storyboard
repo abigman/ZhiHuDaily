@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Y8R-Ia-Bo7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qd4-63-kQG">
+            <objects>
+                <navigationController id="Y8R-Ia-Bo7" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4qK-m4-Mdu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ep3-ja-Yon" kind="relationship" relationship="rootViewController" id="lUg-xo-vHR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hG9-yz-Ggb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="195"/>
+        </scene>
+        <!--今日热闻-->
+        <scene sceneID="8YN-Sv-v4Q">
+            <objects>
+                <tableViewController id="ep3-ja-Yon" customClass="HomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" id="7lg-Uo-AZn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="TF3-Tl-R2z" customClass="HomeTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TF3-Tl-R2z" id="Cx7-Pz-bVk">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是懒得开飞机上来的访问回复水电费老师看的减肥为飞机上来的方式国剧盛典飞是大家发论文课桑德菲杰拉尔森水电费了解色粉离开家违反了空间顺路快递几分萨菲隆的空间违反了开始交电费阿芙拉科技未来风科技" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vo-yy-2M7">
+                                            <rect key="frame" x="8" y="8" width="276" height="119"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gee-6H-1zk">
+                                            <rect key="frame" x="286" y="5" width="80" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="yGW-XX-3fi"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Vo-yy-2M7" firstAttribute="top" secondItem="Cx7-Pz-bVk" secondAttribute="topMargin" id="Iic-9M-91A"/>
+                                        <constraint firstItem="gee-6H-1zk" firstAttribute="leading" secondItem="1Vo-yy-2M7" secondAttribute="trailing" constant="2" id="akE-mS-0tE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gee-6H-1zk" secondAttribute="bottom" constant="1.5" id="mIo-cR-Pzs"/>
+                                        <constraint firstItem="1Vo-yy-2M7" firstAttribute="leading" secondItem="Cx7-Pz-bVk" secondAttribute="leadingMargin" id="n7r-Bq-aaJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gee-6H-1zk" secondAttribute="trailing" constant="1" id="sKu-fT-Avw"/>
+                                        <constraint firstItem="gee-6H-1zk" firstAttribute="top" secondItem="Cx7-Pz-bVk" secondAttribute="topMargin" constant="-3" id="wLj-ip-fCd"/>
+                                        <constraint firstItem="1Vo-yy-2M7" firstAttribute="centerY" secondItem="Cx7-Pz-bVk" secondAttribute="centerY" id="zIR-63-D2a"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgView" destination="gee-6H-1zk" id="Upk-ZI-Zdi"/>
+                                    <outlet property="titleLabel" destination="1Vo-yy-2M7" id="qqa-Ie-V00"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ep3-ja-Yon" id="qxU-ex-9IM"/>
+                            <outlet property="delegate" destination="ep3-ja-Yon" id="zgk-LI-pyN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="今日热闻" id="GON-Fh-jtM"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJT-he-s08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539.5" y="194.5"/>
+        </scene>
+    </scenes>
+</document>
