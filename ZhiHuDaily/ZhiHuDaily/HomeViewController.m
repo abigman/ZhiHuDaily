@@ -10,10 +10,14 @@
 #import "HomeTableViewCell.h"
 #import "BannerView.h"
 #import "AppMacro.h"
+#import "DataManager.h"
+#import "Model.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface HomeViewController ()
 
 @property (strong, nonatomic) BannerView *bannerView;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -22,6 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.tableHeaderView = self.bannerView;
+    self.dataArray = [NSMutableArray arrayWithCapacity:0];
+    
+    NSLog(@"%@", NSHomeDirectory());
+    
+    [[DataManager manager] requestDataFromServer:^(BOOL success) {
+        if (success) {
+            NSLog(@"SUCCESS");
+            self.dataArray = [[DataManager manager] selectData:15 andOffset:0];
+
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"ERROR");
+        }
+    }];
+    
     
 }
 
@@ -35,7 +54,7 @@
 - (BannerView *)bannerView {
     if (!_bannerView) {
         _bannerView = [[BannerView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200) pageCount:5];
-        [_bannerView loadImage:nil];
+        [_bannerView loadImage:nil placeholder:nil];
         _bannerView.timeInterval = 5;
         [self.view addSubview:_bannerView];
     }
@@ -50,14 +69,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell" forIndexPath:indexPath];
-    cell.imgView.backgroundColor = RANDOM_COLOR;
-
+//    cell.imgView.backgroundColor = RANDOM_COLOR;
+    
+    Model *model = _dataArray[indexPath.row];
+    cell.titleLabel.text = model.title;
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.image]];
+    
     return cell;
 }
 
@@ -66,6 +89,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100;
 }
+
 
 
 @end

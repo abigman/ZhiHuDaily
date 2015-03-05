@@ -17,15 +17,16 @@
 @interface BannerView : UIView
 
 @property (weak, nonatomic) id<BannerViewDelegate> delegate;
+
+//滚动的时间间隔, 默认为5秒
 @property (assign, nonatomic) NSTimeInterval timeInterval;
 
+//用户拖动的时候是否暂停计时器,默认为NO
+@property (assign, nonatomic) BOOL stopScrollWhenDragging;
 
 - (id)initWithFrame:(CGRect)frame pageCount:(NSInteger)pageCount;
 
 //从imageURL数组中加载图像, url为网络地址
-- (void)loadImage:(NSArray *)imageUrlArray;
-
-//设置滚动的事件间隔, 默认为5秒
-- (void)setTimeInterval:(NSTimeInterval)timeInterval;
+- (void)loadImage:(NSArray *)imageUrlArray placeholder:(UIImage *)plageholder;
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2AAF0F1A6E5F9000083B35 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AAF0E1A6E5F9000083B35 /* Story.m */; };
+		7B2AAF121A6E5FC400083B35 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AAF111A6E5FC400083B35 /* DataManager.m */; };
+		7B2AAF1B1A6E900500083B35 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2AAF1A1A6E900500083B35 /* Model.m */; };
 		7B46B0771A6AE0DA00EA1FB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B0761A6AE0DA00EA1FB2 /* main.m */; };
 		7B46B07D1A6AE0DA00EA1FB2 /* ZhiHuDaily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B07B1A6AE0DA00EA1FB2 /* ZhiHuDaily.xcdatamodeld */; };
 		7B46B0851A6AE0DA00EA1FB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B46B0841A6AE0DA00EA1FB2 /* Images.xcassets */; };
@@ -17,6 +20,7 @@
 		7B46B0A81A6AE12400EA1FB2 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B0A51A6AE12400EA1FB2 /* HomeTableViewCell.m */; };
 		7B46B0A91A6AE12400EA1FB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B46B0A71A6AE12400EA1FB2 /* HomeViewController.m */; };
 		7B46B0AB1A6AE13F00EA1FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B46B0AA1A6AE13F00EA1FB2 /* Main.storyboard */; };
+		BCD370B5EFE2FA4217AC26B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76076F8E032C8B7C4C5413B7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5120381197D108BC2D482ED4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		76076F8E032C8B7C4C5413B7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2AAF0D1A6E5F9000083B35 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		7B2AAF0E1A6E5F9000083B35 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
+		7B2AAF101A6E5FC400083B35 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		7B2AAF111A6E5FC400083B35 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		7B2AAF191A6E900500083B35 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		7B2AAF1A1A6E900500083B35 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		7B46B0711A6AE0DA00EA1FB2 /* ZhiHuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiHuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B46B0751A6AE0DA00EA1FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B46B0761A6AE0DA00EA1FB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +61,7 @@
 		7B46B0A61A6AE12400EA1FB2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7B46B0A71A6AE12400EA1FB2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		7B46B0AA1A6AE13F00EA1FB2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EAF88025BD07EA800210A809 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD370B5EFE2FA4217AC26B5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06D4238B898D1FD5C03C77C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAF88025BD07EA800210A809 /* Pods.debug.xcconfig */,
+				5120381197D108BC2D482ED4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B46B0681A6AE0DA00EA1FB2 = {
 			isa = PBXGroup;
 			children = (
 				7B46B0731A6AE0DA00EA1FB2 /* ZhiHuDaily */,
 				7B46B0901A6AE0DA00EA1FB2 /* ZhiHuDailyTests */,
 				7B46B0721A6AE0DA00EA1FB2 /* Products */,
+				06D4238B898D1FD5C03C77C5 /* Pods */,
+				EC2BC4C9497C003460EB12CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +165,7 @@
 		7B46B0AD1A6AE18800EA1FB2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7B46B0B11A6CAE9E00EA1FB2 /* Model */,
 				7B46B0AE1A6AE19300EA1FB2 /* View */,
 				7B46B0B01A6AE1A100EA1FB2 /* Controller */,
 			);
@@ -174,6 +200,27 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		7B46B0B11A6CAE9E00EA1FB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B2AAF101A6E5FC400083B35 /* DataManager.h */,
+				7B2AAF111A6E5FC400083B35 /* DataManager.m */,
+				7B2AAF191A6E900500083B35 /* Model.h */,
+				7B2AAF1A1A6E900500083B35 /* Model.m */,
+				7B2AAF0D1A6E5F9000083B35 /* Story.h */,
+				7B2AAF0E1A6E5F9000083B35 /* Story.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EC2BC4C9497C003460EB12CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76076F8E032C8B7C4C5413B7 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B46B0971A6AE0DA00EA1FB2 /* Build configuration list for PBXNativeTarget "ZhiHuDaily" */;
 			buildPhases = (
+				2618AD0086223B68A5756376 /* Check Pods Manifest.lock */,
 				7B46B06D1A6AE0DA00EA1FB2 /* Sources */,
 				7B46B06E1A6AE0DA00EA1FB2 /* Frameworks */,
 				7B46B06F1A6AE0DA00EA1FB2 /* Resources */,
+				B119E043C02377FB210F4398 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +318,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2618AD0086223B68A5756376 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B119E043C02377FB210F4398 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B46B06D1A6AE0DA00EA1FB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,7 +361,10 @@
 				7B46B0A81A6AE12400EA1FB2 /* HomeTableViewCell.m in Sources */,
 				7B46B07D1A6AE0DA00EA1FB2 /* ZhiHuDaily.xcdatamodeld in Sources */,
 				7B46B0A21A6AE11000EA1FB2 /* AppDelegate.m in Sources */,
+				7B2AAF121A6E5FC400083B35 /* DataManager.m in Sources */,
+				7B2AAF0F1A6E5F9000083B35 /* Story.m in Sources */,
 				7B46B0A91A6AE12400EA1FB2 /* HomeViewController.m in Sources */,
+				7B2AAF1B1A6E900500083B35 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +476,7 @@
 		};
 		7B46B0981A6AE0DA00EA1FB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAF88025BD07EA800210A809 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZhiHuDaily/Info.plist;
@@ -401,6 +487,7 @@
 		};
 		7B46B0991A6AE0DA00EA1FB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5120381197D108BC2D482ED4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZhiHuDaily/Info.plist;
@@ -462,6 +549,7 @@
 				7B46B0991A6AE0DA00EA1FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B46B09A1A6AE0DA00EA1FB2 /* Build configuration list for PBXNativeTarget "ZhiHuDailyTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +558,7 @@
 				7B46B09C1A6AE0DA00EA1FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

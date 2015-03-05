@@ -25,9 +25,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         _pageCount = pageCount;
+        
         _timeInterval = 5;
         
+        _stopScrollWhenDragging = NO;
+        
         [self scrollView];
+        
+        [self imageViews];
         
         [self pageControl];
         
@@ -36,7 +41,7 @@
     return self;
 }
 
-- (void)loadImage:(NSArray *)imageUrlArray {
+- (void)loadImage:(NSArray *)imageUrlArray placeholder:(UIImage *)plageholder{
     for (int i = 1; i <= _pageCount; i++) {
         UIImageView *imageView = (UIImageView *)[self viewWithTag:100 + i];
         imageView.backgroundColor = RANDOM_COLOR;
@@ -61,13 +66,11 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.contentOffset = CGPointMake(self.frame.size.width, 0);
         [self addSubview:_scrollView];
-        
-        [self setupImageView];
     }
     return _scrollView;
 }
 
-- (void)setupImageView {
+- (void)imageViews {
     for (int i = 0; i < _pageCount + 2; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height)];
         imageView.tag = 100 + i;
@@ -85,7 +88,8 @@
 
 - (UIPageControl *)pageControl {
     if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 10, self.frame.size.width, 0)];
+        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 10, 0, 0)];
+        _pageControl.center = CGPointMake(self.center.x, _pageControl.frame.origin.y);
         _pageControl.numberOfPages = _pageCount;
         [self addSubview:_pageControl];
     }
@@ -130,7 +134,9 @@
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [self stopTimer];
+    if (_stopScrollWhenDragging) {
+        [self stopTimer];
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -147,7 +153,9 @@
     scrollView.contentOffset = CGPointMake(self.frame.size.width * page, 0);
     _pageControl.currentPage = page - 1;
     
-    [self startTimer];
+    if (_stopScrollWhenDragging) {
+        [self startTimer];
+    }
 }
 
 
